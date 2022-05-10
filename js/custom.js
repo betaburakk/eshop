@@ -1,0 +1,21 @@
+jQuery(document).ready(function($){"use strict";$('a[data-rel]').each(function(){$(this).attr('rel',$(this).data('rel'));$(".pretty-gallery a[rel^='prettyPhoto']").prettyPhoto();});if($('#homev1-slider').length){$('#homev1-slider').owlCarousel({loop:true,dots:true,nav:false,navText:'',items:1,autoplay:true,smartSpeed:1000,});}
+if($('#homev2-slider').length){$('#homev2-slider').owlCarousel({loop:true,dots:false,nav:true,navText:'',items:1,autoplay:true,smartSpeed:2000,});}
+if($('#homev3-slider').length){$('#homev3-slider').owlCarousel({loop:true,dots:false,nav:false,navText:'',items:1,autoplay:true,smartSpeed:2000,});}
+if($('#homev4-slider').length){$('#homev4-slider').owlCarousel({loop:true,dots:false,nav:true,navText:'',items:1,autoplay:true,smartSpeed:2000,});}
+if($('.experties-slider').length){$('.experties-slider').owlCarousel({loop:true,dots:false,nav:true,navText:'',items:3,smartSpeed:500,margin:30,responsiveClass:true,responsive:{0:{items:1,},768:{items:2,},1199:{items:3,}}});}
+if($('.upevents-slider').length){$('.upevents-slider').owlCarousel({loop:true,dots:false,nav:true,navText:'',items:2,smartSpeed:500,margin:30,responsiveClass:true,responsive:{0:{items:1,},768:{items:2,},1199:{items:2,}}});}
+if($('#cp-team-slider').length){$('#cp-team-slider').owlCarousel({loop:true,dots:false,nav:true,navText:'',items:2,smartSpeed:500,margin:30,responsiveClass:true,responsive:{0:{items:1,},768:{items:2,},1199:{items:2,}}});}
+if($('#cp-testimonial-slider').length){$('#cp-testimonial-slider').owlCarousel({loop:true,dots:true,nav:false,navText:'',items:1,autoplay:false,smartSpeed:1500,});}
+if($('#cp-testimonial-slider2').length){$('#cp-testimonial-slider2').owlCarousel({loop:true,dots:true,nav:false,navText:'',items:2,smartSpeed:500,padding:10,responsiveClass:true,responsive:{0:{items:1,},768:{items:1,},992:{items:2,},1199:{items:2,}}});}
+if($('#cp-blog-slider').length){$('#cp-blog-slider').owlCarousel({loop:true,dots:false,nav:true,navText:'',items:1,autoplay:false,smartSpeed:1500,});}
+if($('#cp-blog-slider_v2').length){$('#cp-blog-slider_v2').owlCarousel({loop:true,dots:false,nav:true,navText:'',items:1,autoplay:false,smartSpeed:1500,});}
+if($('.eventcountdown').length){$(function(){var austDay=new Date();austDay=new Date(austDay.getFullYear()+ 1,1- 1,26);$('.eventcountdown').countdown({until:austDay});$('#year').text(austDay.getFullYear());});}
+if($('.counter').length){$('.counter').counterUp({delay:10,time:1000});}
+if($('.cp-countdown').length){$('.cp-countdown').final_countdown({'start':1362139200,'end':1388461320,'now':1387461319});}
+if($(".cp-gallery-metro-1 .isotope").length){var $container=$('.cp-gallery-metro-1 .isotope');$container.imagesLoaded(function(){$container.isotope({itemSelector:'.item',transitionDuration:'0.6s',masonry:{columnWidth:$container.width()/ 12},layoutMode:'masonry'});});$(window).resize(function(){$container.isotope({masonry:{columnWidth:$container.width()/ 12}});});}
+if($(".cp-gallery-metro-2 .isotope").length){var $container=$('.cp-gallery-metro-2 .isotope');$container.imagesLoaded(function(){$container.isotope({itemSelector:'.item',transitionDuration:'0.6s',masonry:{columnWidth:$container.width()/ 12},layoutMode:'masonry'});});$(window).resize(function(){$container.isotope({masonry:{columnWidth:$container.width()/ 12}});});}
+if($('.portfolioContainer').length){var $container=$('.portfolioContainer');$container.imagesLoaded(function(){$container.isotope({filter:'*',animationOptions:{duration:750,easing:'linear',queue:false}});});}
+if($('.portfolioFilter a').length){$('.portfolioFilter a').click(function(){$('.portfolioFilter .current').removeClass('current');$(this).addClass('current');var selector=$(this).attr('data-filter');$container.isotope({filter:selector,animationOptions:{duration:750,easing:'linear',queue:false}});return false;});}
+if($('#cp-map_contact').length){var map;var myLatLng=new google.maps.LatLng(48.85661,2.35222);var myOptions={zoom:12,center:myLatLng,zoomControl:true,mapTypeId:google.maps.MapTypeId.ROADMAP,mapTypeControl:false,styles:[{saturation:-50,lightness:10}],}
+map=new google.maps.Map(document.getElementById('cp-map_contact'),myOptions);var marker=new google.maps.Marker({position:map.getCenter(),map:map,icon:'images/map-icon.png'});marker.getPosition();}
+if($('.spinnerExample').length){$('.spinnerExample').spinner()}});
